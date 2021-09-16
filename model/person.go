@@ -7,7 +7,7 @@ type Community struct {
 }
 
 // Communities slice de comunidades
-type Comunities []Community
+type Communities []Community
 
 // Person Estructura de una persona
 type Person struct {
