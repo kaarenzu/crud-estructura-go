@@ -1,0 +1,45 @@
+
+Vamos a crear nuestra primer API , va a ser completa en cuanto a un Recurso. Vamos a crear un recurso y a ese recurso vamos a darle la opción dé crear, actualizar, consultar y borrar a eso le llamamos CRUD.
+
+CONCEPTOS BÁSICOS 
+
+RUTAS : Nos permiten identificar los recursos de nuestras APIS de manera única.
+
+/api/vi/courses  : /courses esta parte es el recurso y por lo general va en plural(buena practica) , 
+
+Cada recurso se identifica con una URI ( como se ve en ejemplo anterior ).
+
+Cada ruta es única.
+
+Puedes versionar las rutas con un simple v1, v2, ... // Es bueno colocar la versión para que si el día de mañana cambias en algo la API tengas las 2 APIS.
+
+
+
+HANDLERS 
+
+    Funciones que son ejecutadas cuando realiza una petición a una ruta .
+
+
+HEADER & BODY
+
+Las peticiones y las respuestas tienen  encabezados y cuerpo . 
+
+    - Headers : Tienen información como : 
+
+        Autorizaciones : authorization : Bearer, un-token-jwt , 
+        Tipo contenido : Content-Type : application/json,
+        Cookies.
+
+    - Body : Es el contenido de la petición(opcional) 
+
+
+QueryParams 
+
+Permiten agregarle información adicional que van en la URI
+// Por ej si quiero los solo los cursos gratis(free) y si quiero agregar más de un parametro lo que hacemos es agregar & y separamos los queryparams .
+
+/api/v1/courses?free=true&start=2020-05-12
+
+Envio info de un filtro por ej
+
+Los QUERYPARAMS son muy utilizados para las peticiones tipo GET, pero no quiere decir que sean solo para ese tipo de petición 
